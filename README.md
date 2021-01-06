@@ -41,7 +41,7 @@ Suggestions, requests and bug reports are always welcomed. If you have any don't
 ### Using Virtual Environment
 - Clone it on your System
 ```
-git clone 
+git clone https://github.com/OtakuStan/OS-Discord-Bot.git
 ```
 - Go to the Working Directory
 ```
