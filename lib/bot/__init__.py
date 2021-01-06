@@ -11,7 +11,7 @@ from datetime import datetime
 from asyncio import sleep
 
 PREFIX = "&"
-OWNER_IDS = [572353145963806721]
+OWNER_IDS = [572353145963806721,524309352698609684]
 COMMANDS = [path.split("\\")[-1][:-3] for path in glob("./lib/commands/*.py")]
 IGNORE_EXCEPTIONS = [CommandNotFound, BadArgument]
 class Ready(object):
@@ -58,7 +58,7 @@ class Bot(BotBase):
             if self.ready:
                 await self.invoke(ctx)
             else:
-                await self.send("Wait for Oneechan to be ready!! ")
+                await self.send("Wait for OtakuStan Bot to be ready!! ")
     
     async def on_connect(self):
         print("Ara Ara!")
@@ -76,17 +76,17 @@ class Bot(BotBase):
             pass
 
         elif isinstance(exc, MissingRequiredArgument):
-            await ctx.send("One or More argument required by Gift Bot!!")
+            await ctx.send("One or More argument required by OtakuStan Bot!!")
 
         elif isinstance(exc, MissingPermissions):
-            await ctx.send("You are not allowed to create Giveaways")
+            await ctx.send("You are not allowed to use the Commands")
 
         elif isinstance(exc, MissingRole):
-            await ctx.send("You do not have the necessary role to create Giveaways")
+            await ctx.send("You do not have the necessary role to use OtakuStan Bot")
         
         elif hasattr(exc, "original"):
             if isinstance(exc.original, Forbidden):
-                await ctx.send("Gift Bot doesn't have permission to do that!!")
+                await ctx.send("OtakuStan Bot doesn't have permission to do that!!")
             else:
                 raise exc.original
         else:
@@ -99,12 +99,12 @@ class Bot(BotBase):
                 print("waiting......")
                 await sleep(0.5)
             self.ready = True
-            print("Gift Bot ready")
+            print("OtakuStan Bot ready")
             # embed = Embed(title="OtakuStan Bot is Now Online", description="You have Otakustan bot into your server to help with your Giveaways", colour=0x00FFFF, timestamp=datetime.utcnow())
             # embed.set_author(name="LoLi Lover")
             # await self.stdout.send(embed=embed)
         else:
-            print("Gift Bot reconnected")
+            print("OtakuStan Bot reconnected")
 
     async def on_guild_join(self, guild):
         general = find(lambda x: x.name == 'general', guild.text_channels)
