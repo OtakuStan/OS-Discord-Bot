@@ -2,7 +2,7 @@
 A Discord BOT for OtakuStan to help manage OtakuStan's discord servers easily and seamlessly.
 
 ## About
-This Discor Bot helps you to manage your Discord Server on your server to interact and have fun with your server members to keep your server ever active.
+This Discord Bot helps you to manage various aspects on your discord server, interact with members and have fun with your server members to keep your server ever active.
 
 This is made is Python and python discord library Discord.py
 
@@ -37,5 +37,41 @@ Suggestions, requests and bug reports are always welcomed. If you have any don't
 
  More To be Added soon....
 
+## Running The Bot on Your System
+### Using Virtual Environment
+- Clone it on your System
+```
+git clone 
+```
+- Go to the Working Directory
+```
+cd Otakustan_Bot/
+```
+- Creating And Activating Virtual Environment
+```
+py -m venv env / python3 -m venv env
+
+env/scripts/activate
+```
+- Install dependencies
+```
+pip installl -r requirements.txt
+```
+
+- Add token
+```
+touch lib/bot/token
+```
+
+Add the Token to the token file
+
+- Run the Bot
+```
+python os.py
+```
+
+### Using Environment Variable
+
+You need to have Discord py installed globally in your System. Add the token to your .env file. Then in the run method of bot file simply initialize token from the environment variable
 
 
