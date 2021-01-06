@@ -10,7 +10,7 @@ from glob import glob
 from datetime import datetime 
 from asyncio import sleep
 
-PREFIX = "!"
+PREFIX = "&"
 OWNER_IDS = [572353145963806721]
 COMMANDS = [path.split("\\")[-1][:-3] for path in glob("./lib/commands/*.py")]
 IGNORE_EXCEPTIONS = [CommandNotFound, BadArgument]
