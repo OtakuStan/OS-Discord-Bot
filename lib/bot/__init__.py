@@ -111,7 +111,7 @@ class Bot(BotBase):
         if general and general.permissions_for(guild.me).send_messages:
             embed = Embed(title="OtakuStan Bot is Now on your server", description="Oniichan/Oneechan!! You have invited OtakuStan bot into your server to help you with your Giveaways", colour=0x00FFFF, timestamp=datetime.utcnow())
             embed.set_author(name=guild.name)
-            # embed.set_thumbnail(url="https://firebasestorage.googleapis.com/v0/b/sociality-a732c.appspot.com/o/Loli.png?alt=media&token=ab5c8924-9a14-40a9-97b8-dba68b69195d")
+            embed.set_thumbnail(url="https://firebasestorage.googleapis.com/v0/b/sociality-a732c.appspot.com/o/OS%20new%20logo.jpg?alt=media&token=99f4399f-57ae-469a-9ba8-78972bead82a")
             # embed.set_image(url="https://firebasestorage.googleapis.com/v0/b/sociality-a732c.appspot.com/o/Loli.png?alt=media&token=ab5c8924-9a14-40a9-97b8-dba68b69195d")
             await general.send(embed=embed)
 
