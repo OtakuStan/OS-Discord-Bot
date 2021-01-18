@@ -74,6 +74,18 @@ class Rules(Cog):
         embed.set_author(name="Otakustan")
         await ctx.send(embed=embed)
 
+    @command(name="rule12",aliases=["r12", "rle12"], hidden=True)
+    async def rule3(self,ctx):
+        embed = Embed(title=get_rule_index(11), description=get_rule_value(11), colour=0x00FFFF, timestamp=datetime.utcnow())
+        embed.set_author(name="Otakustan")
+        await ctx.send(embed=embed)
+
+    @command(name="rule13",aliases=["r13", "rle13"], hidden=True)
+    async def rule3(self,ctx):
+        embed = Embed(title=get_rule_index(12), description=get_rule_value(12), colour=0x00FFFF, timestamp=datetime.utcnow())
+        embed.set_author(name="Otakustan")
+        await ctx.send(embed=embed)
+
     @Cog.listener()
     async def on_ready(self):
         if not self.bot.ready:
