@@ -34,7 +34,13 @@ class Rules(Cog):
 
     @command(name="rule5",aliases=["r5", "rle5"], hidden=True)
     async def rule3(self,ctx):
-        embed = Embed(title=get_rule_index(2), description=get_rule_value(2), colour=0x00FFFF, timestamp=datetime.utcnow())
+        embed = Embed(title=get_rule_index(4), description=get_rule_value(4), colour=0x00FFFF, timestamp=datetime.utcnow())
+        embed.set_author(name="Otakustan")
+        await ctx.send(embed=embed)
+
+    @command(name="rule6",aliases=["r6", "rle6"], hidden=True)
+    async def rule3(self,ctx):
+        embed = Embed(title=get_rule_index(5), description=get_rule_value(5), colour=0x00FFFF, timestamp=datetime.utcnow())
         embed.set_author(name="Otakustan")
         await ctx.send(embed=embed)
 
