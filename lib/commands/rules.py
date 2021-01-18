@@ -16,13 +16,25 @@ class Rules(Cog):
 
     @command(name="rule2",aliases=["r2", "rle2"], hidden=True)
     async def rule2(self,ctx):
-        embed = Embed(title="Rule 02", description="No Spam, neither in text channels nor in voice channels.", colour=0x00FFFF, timestamp=datetime.utcnow())
+        embed = Embed(title=get_rule_index(1), description=get_rule_value(1), colour=0x00FFFF, timestamp=datetime.utcnow())
         embed.set_author(name="Otakustan")
         await ctx.send(embed=embed)
         
     @command(name="rule3",aliases=["r3", "rle3"], hidden=True)
     async def rule3(self,ctx):
-        embed = Embed(title="Rule 03", description="No Spam, neither in text channels nor in voice channels.", colour=0x00FFFF, timestamp=datetime.utcnow())
+        embed = Embed(title=get_rule_index(2), description=get_rule_value(2), colour=0x00FFFF, timestamp=datetime.utcnow())
+        embed.set_author(name="Otakustan")
+        await ctx.send(embed=embed)
+
+    @command(name="rule4",aliases=["r4", "rle4"], hidden=True)
+    async def rule3(self,ctx):
+        embed = Embed(title=get_rule_index(3), description=get_rule_value(3), colour=0x00FFFF, timestamp=datetime.utcnow())
+        embed.set_author(name="Otakustan")
+        await ctx.send(embed=embed)
+
+    @command(name="rule5",aliases=["r5", "rle5"], hidden=True)
+    async def rule3(self,ctx):
+        embed = Embed(title=get_rule_index(2), description=get_rule_value(2), colour=0x00FFFF, timestamp=datetime.utcnow())
         embed.set_author(name="Otakustan")
         await ctx.send(embed=embed)
 
