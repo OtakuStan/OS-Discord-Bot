@@ -30,7 +30,6 @@ class Command(Cog):
     
     @Cog.listener()
     async def on_ready(self):
-        # await self.bot.stdout.send("Command Cog ready")
         if not self.bot.ready:
             self.bot.command_ready.ready_up("commands")
 
