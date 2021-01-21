@@ -11,13 +11,14 @@ rules = {
             "Rule10": "No NSFW",
             "Rule11": "No NSFW nicknames",
             "Rule12": "Please try not to be mean to other humans and bots.",
-            "Rule13": "Must follow all the Discord's Terms of Service (Discord TOS - https://discord.com/terms)",
+            "Rule13": "Must follow all the Discord's Terms of Service (Discord TOS - https://discord.com/terms)"
         }
+keys = [*rules.keys()]
+values = [*rules.values()]
+
 
 def get_rule_index(index):
-    keys = [*rules.keys()]
     return keys[index]
 
 def get_rule_value(index):
-    values = [*rules.values()]
     return values[index]

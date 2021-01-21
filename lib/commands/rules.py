@@ -27,61 +27,61 @@ class Rules(Cog):
         await ctx.send(embed=embed)
 
     @command(name="rule4",aliases=["r4", "rle4"], hidden=True)
-    async def rule3(self,ctx):
+    async def rule4(self,ctx):
         embed = Embed(title=get_rule_index(3), description=get_rule_value(3), colour=0x00FFFF, timestamp=datetime.utcnow())
         embed.set_author(name="Otakustan")
         await ctx.send(embed=embed)
 
     @command(name="rule5",aliases=["r5", "rle5"], hidden=True)
-    async def rule3(self,ctx):
+    async def rule5(self,ctx):
         embed = Embed(title=get_rule_index(4), description=get_rule_value(4), colour=0x00FFFF, timestamp=datetime.utcnow())
         embed.set_author(name="Otakustan")
         await ctx.send(embed=embed)
 
     @command(name="rule6",aliases=["r6", "rle6"], hidden=True)
-    async def rule3(self,ctx):
+    async def rule6(self,ctx):
         embed = Embed(title=get_rule_index(5), description=get_rule_value(5), colour=0x00FFFF, timestamp=datetime.utcnow())
         embed.set_author(name="Otakustan")
         await ctx.send(embed=embed)
 
     @command(name="rule7",aliases=["r7", "rle7"], hidden=True)
-    async def rule3(self,ctx):
+    async def rule7(self,ctx):
         embed = Embed(title=get_rule_index(6), description=get_rule_value(6), colour=0x00FFFF, timestamp=datetime.utcnow())
         embed.set_author(name="Otakustan")
         await ctx.send(embed=embed)
 
     @command(name="rule8",aliases=["r8", "rle8"], hidden=True)
-    async def rule3(self,ctx):
+    async def rule8(self,ctx):
         embed = Embed(title=get_rule_index(7), description=get_rule_value(7), colour=0x00FFFF, timestamp=datetime.utcnow())
         embed.set_author(name="Otakustan")
         await ctx.send(embed=embed)
 
     @command(name="rule9",aliases=["r9", "rle9"], hidden=True)
-    async def rule3(self,ctx):
+    async def rule9(self,ctx):
         embed = Embed(title=get_rule_index(8), description=get_rule_value(8), colour=0x00FFFF, timestamp=datetime.utcnow())
         embed.set_author(name="Otakustan")
         await ctx.send(embed=embed)
 
     @command(name="rule10",aliases=["r10", "rle10"], hidden=True)
-    async def rule3(self,ctx):
+    async def rule10(self,ctx):
         embed = Embed(title=get_rule_index(9), description=get_rule_value(9), colour=0x00FFFF, timestamp=datetime.utcnow())
         embed.set_author(name="Otakustan")
         await ctx.send(embed=embed)
 
     @command(name="rule11",aliases=["r11", "rle11"], hidden=True)
-    async def rule3(self,ctx):
+    async def rule11(self,ctx):
         embed = Embed(title=get_rule_index(10), description=get_rule_value(10), colour=0x00FFFF, timestamp=datetime.utcnow())
         embed.set_author(name="Otakustan")
         await ctx.send(embed=embed)
 
     @command(name="rule12",aliases=["r12", "rle12"], hidden=True)
-    async def rule3(self,ctx):
+    async def rule12(self,ctx):
         embed = Embed(title=get_rule_index(11), description=get_rule_value(11), colour=0x00FFFF, timestamp=datetime.utcnow())
         embed.set_author(name="Otakustan")
         await ctx.send(embed=embed)
 
     @command(name="rule13",aliases=["r13", "rle13"], hidden=True)
-    async def rule3(self,ctx):
+    async def rule13(self,ctx):
         embed = Embed(title=get_rule_index(12), description=get_rule_value(12), colour=0x00FFFF, timestamp=datetime.utcnow())
         embed.set_author(name="Otakustan")
         await ctx.send(embed=embed)
