@@ -42,7 +42,7 @@ class Command(Cog):
     async def ban(ctx, member : discord.Member, *, reason = None):
        await member.ban(reason = reason)
     
-    @command(name="ban", aliases=["b"], hidden=True)
+    @command(name="unban", aliases=["ub"], hidden=True)
     @commands.has_permissions(administrator = True)
     async def unban(ctx, *, member):
       banned_users = await ctx.guild.bans()
