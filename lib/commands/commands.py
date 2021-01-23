@@ -1,6 +1,7 @@
 from discord.ext.commands import Cog
-from discord.ext.commands import command
+from discord.ext.commands import command, has_permissions
 from discord import Embed, File
+from discord import Member
 from random import choice
 from datetime import datetime
 
@@ -30,31 +31,29 @@ class Command(Cog):
     
     # working say implementation
     @command(name="echo", aliases=["shout", "say"])                   
-    @client.command(aliases=['Say'], pass_context = True)
-    async def say(ctx, *args):
+    async def say( self, ctx, *args):
         mesg = ' '.join(args)
         await ctx.send(mesg)
 
-# Moderation
+    # Moderation
                        
     @command(name="ban", aliases=["b"], hidden=True)
-    @commands.has_permissions(ban_members = True)
-    async def ban(ctx, member : discord.Member, *, reason = None):
+    @has_permissions(ban_members = True)
+    async def ban(self, ctx, member : Member, *, reason = None):
        await member.ban(reason = reason)
     
     @command(name="unban", aliases=["ub"], hidden=True)
-    @commands.has_permissions(administrator = True)
-    async def unban(ctx, *, member):
+    @has_permissions(administrator = True)
+    async def unban(self, ctx, *, member):
       banned_users = await ctx.guild.bans()
       member_name, member_discriminator = member.split("#")
+      for ban_entry in banned_users:
+            user = ban_entry.user
 
-    for ban_entry in banned_users:
-        user = ban_entry.user
-
-        if (user.name, user.discriminator) == (member_name, member_discriminator):
-            await ctx.guild.unban(user)
-            await ctx.send(f'Unbanned {user.mention}')
-            return
+            if (user.name, user.discriminator) == (member_name, member_discriminator):
+                await ctx.guild.unban(user)
+                await ctx.send(f'Unbanned {user.mention}')
+                return
                        
     @Cog.listener()
     async def on_ready(self):
