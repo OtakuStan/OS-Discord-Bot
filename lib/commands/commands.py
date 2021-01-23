@@ -1,6 +1,7 @@
 from discord.ext.commands import Cog
-from discord.ext.commands import command
+from discord.ext.commands import command, has_permissions
 from discord import Embed, File
+from discord import Member
 from random import choice
 from datetime import datetime
 
@@ -37,12 +38,12 @@ class Command(Cog):
     # Moderation
                        
     @command(name="ban", aliases=["b"], hidden=True)
-    @commands.has_permissions(ban_members = True)
-    async def ban(self, ctx, member : discord.Member, *, reason = None):
+    @has_permissions(ban_members = True)
+    async def ban(self, ctx, member : Member, *, reason = None):
        await member.ban(reason = reason)
     
     @command(name="unban", aliases=["ub"], hidden=True)
-    @commands.has_permissions(administrator = True)
+    @has_permissions(administrator = True)
     async def unban(self, ctx, *, member):
       banned_users = await ctx.guild.bans()
       member_name, member_discriminator = member.split("#")
