@@ -54,6 +54,13 @@ class Command(Cog):
                 await ctx.guild.unban(user)
                 await ctx.send(f'Unbanned {user.mention}')
                 return
+    
+    @command(name="clear", aliases=["c"], hidden=True)
+    @has_permissions(manage_messages = True)
+    async def clear(ctx,amount=100):
+      await ctx.channel.purge(limit = amount)
+      await ctx.send("Cleared " + amount + " messages")
+                       
 ## error handling
     @command.event
     async def on_command_error(ctx, error):
@@ -63,7 +70,7 @@ class Command(Cog):
         await ctx.send("You dont have all the requirements :angry:")
                        
                       
-                       
+                  
                        
     @Cog.listener()
     async def on_ready(self):
