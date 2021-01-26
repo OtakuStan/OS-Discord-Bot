@@ -15,7 +15,7 @@ class Command(Cog):
 
     @command(name="callme", aliases=["call", "c"], hidden=True)
     async def call_me(self, ctx, *, message):
-        # await ctx.message.delete()
+        await ctx.message.delete()
         await ctx.send(f"{ctx.author.mention} {message}")
 
     @command(name="helpme", aliases=["HELP", "helpu"])

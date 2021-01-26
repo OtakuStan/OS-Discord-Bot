@@ -2,7 +2,7 @@ from discord.ext.commands import Cog
 from discord.ext.commands import command
 from discord import Embed
 from datetime import datetime
-from lib.utils.rule import get_rule_index, get_rule_value
+from lib.utils.rule import get_rule_index, get_rule_value, get_all_rules
 
 class Rules(Cog):
     def __init__(self,bot):
@@ -83,6 +83,15 @@ class Rules(Cog):
     @command(name="rule13",aliases=["r13", "rle13"], hidden=True)
     async def rule13(self,ctx):
         embed = Embed(title=get_rule_index(12), description=get_rule_value(12), colour=0x00FFFF, timestamp=datetime.utcnow())
+        embed.set_author(name="Otakustan")
+        await ctx.send(embed=embed)
+
+    @command(name="ruleall",aliases=["rall", "rleall"], hidden=True)
+    async def rule13(self,ctx):
+        allRules = get_all_rules()
+        embed = Embed(title="All Rules", description="Don't forget to follow the rules!!", colour=0x00FFFF, timestamp=datetime.utcnow())
+        for index, rule in allRules.items():
+            embed.add_field(name=index, value=rule)
         embed.set_author(name="Otakustan")
         await ctx.send(embed=embed)
 
