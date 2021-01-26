@@ -32,8 +32,8 @@ class Command(Cog):
     # working say implementation
     @command(name="echo", aliases=["shout", "say"])                   
     async def say( self, ctx, *args):
-        mesg = ' '.join(args)
-        await ctx.send(mesg)
+        msg = ' '.join(args)
+        await ctx.send(msg)
 
     # Moderation
                        
