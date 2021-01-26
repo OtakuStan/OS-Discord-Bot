@@ -15,7 +15,7 @@ class Command(Cog):
 
     @command(name="callme", aliases=["call", "c"], hidden=True)
     async def call_me(self, ctx, *, message):
-        # await ctx.message.delete()
+        await ctx.message.delete()
         await ctx.send(f"{ctx.author.mention} {message}")
 
     @command(name="helpme", aliases=["HELP", "helpu"])
@@ -32,8 +32,8 @@ class Command(Cog):
     # working say implementation
     @command(name="echo", aliases=["shout", "say"])                   
     async def say( self, ctx, *args):
-        mesg = ' '.join(args)
-        await ctx.send(mesg)
+        msg = ' '.join(args)
+        await ctx.send(msg)
 
     # Moderation
                        

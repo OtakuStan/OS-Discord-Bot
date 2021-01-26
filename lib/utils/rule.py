@@ -22,3 +22,6 @@ def get_rule_index(index):
 
 def get_rule_value(index):
     return values[index]
+
+def get_all_rules():
+    return rules
